@@ -1,31 +1,26 @@
 #!/bin/bash
 
+# Καθαρισμός κενών named pipes
 find . -type p -size 0 -exec rm -v {} +
 
-stud_id=sdi
-
-CONFIG_FILE="config_templates/config_fss_template.tpl"
-STUDENT_ID=$stud_id
-OUTPUT_FILE="config_fss.cfg"
-
- 
+# Καθαρισμός καταλόγων
 rm -rf added_target_dir/*
 rm -rf config_target_dir1/*
 rm -rf config_target_dir2/*
 
-# Replace "sdi" with the given student_id
-sed "s/\/sdiXXX\//\/$STUDENT_ID\//g" "$CONFIG_FILE" > "$OUTPUT_FILE"
+# Απόλυτο μονοπάτι
+FULLPATH=$(pwd)
 
-# rm ../config_fss.cfg
-# cp config_fss.cfg ../
+# fss config
+CONFIG_FILE="config_templates/config_fss_template.tpl"
+OUTPUT_FILE="config_fss.cfg"
+sed "s#fullpathXXX#${FULLPATH}#g" "$CONFIG_FILE" > "$OUTPUT_FILE"
 
+# nfs config
 CONFIG_FILE="config_templates/config_nfs_template.tpl"
-STUDENT_ID=$stud_id
 OUTPUT_FILE="config_nfs.cfg"
+sed "s#fullpathXXX#${FULLPATH}#g" "$CONFIG_FILE" > "$OUTPUT_FILE"
 
-# Replace "sdi" with the given student_id
-sed "s/\/sdiXXX\//\/$STUDENT_ID\//g" "$CONFIG_FILE" > "$OUTPUT_FILE"
-# rm ../config_nfs.cfg
+# Προαιρετική αντιγραφή στον πάνω φάκελο
+# cp config_fss.cfg ../
 # cp config_nfs.cfg ../
-
-
