@@ -30,7 +30,7 @@ sed "s#fullpathXXX#${FULLPATH}#g" "$CONFIG_FILE" > "$OUTPUT_FILE"
 CONFIG_FILE="config_templates/test_case_nfs_commands.txt"
 OUTPUT_FILE="test_case_nfs_commands.txt"
 sed "s#fullpathXXX#${FULLPATH}#g" "$CONFIG_FILE" > "$OUTPUT_FILE"
-
+exit 1
 
 # Προαιρετική αντιγραφή στον πάνω φάκελο
 # cp config_fss.cfg ../
