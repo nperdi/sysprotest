@@ -1,2 +1,2 @@
-fullpathXXX/config_source_dir1@linux05.di.uoa.gr:5556 fullpathXXX/config_target_dir1@linux07.di.uoa.gr:5557
+sysprotest/config_source_dir1@SOURCE_CLIENT_IP:SOURCE_CLIENT_PORT sysprotest/config_target_dir1@TARGET_CLIENT_IP:TARGET_CLIENT_PORT
 
