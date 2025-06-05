@@ -1,0 +1,54 @@
+
+
+## run nfs_manager in a term
+./nfs_manager -l np_nfs_manager.log -c sysprotest/config_nfs.cfg -n 5 -p 5555 -b 7
+
+## run nfs_console in another console
+./nfs_console -l np_nfs_console.log -h <host_IP> -p <host_port>
+
+## run a nfs_client in another console
+## on linuxXX
+./nfs_client -p 5556
+
+## run another nfs_client in another console
+## on linuxYY
+./nfs_client -p 5557
+
+##check initial sync in target client
+
+## console //
+cancel config_source_dir1 
+
+## console
+add added_source_dir added_target_dir
+
+#check updates replace sdi with your sdi
+
+#add a file sto source client
+cp test_files/f4_1000.txt /home/users/sdi/test1/config_source_dir2 
+## check sto target client
+ls -las /home/users/sdi/test1/config_source_dir2 
+
+#add a file  sto source client
+cp test_files/f4_2000.txt /home/users/sdi/test1/config_source_dir2 
+## check sto target client
+ls -las /home/users/sdi/test1/config_source_dir2
+
+#remove a file from source
+rm -rf /home/users/sdi/test1/config_source_dir2/f4_2000.txt
+## check sto target client
+ls -las /home/users/sdi/test1/config_source_dir2
+
+#update a file in source
+ls -las /home/users/sdi/test1/config_source_dir2
+cat test_files/f4_1000.txt >> /home/users/sdi/test1/config_source_dir2/f4_1000_copy.txt
+## check sto target client
+ls -las /home/users/sdi/test1/config_source_dir2
+
+## console //
+shutdown
+
+
+## Anoixe kai deixe ta log arxeio toy manager kai toy console
+
+
