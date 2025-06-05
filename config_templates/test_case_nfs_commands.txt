@@ -14,36 +14,24 @@
 ## on linuxYY
 ./nfs_client -p 5557
 
+
+
 ##check initial sync in target client
 
 ## console //
-cancel config_source_dir1 
+cancel sysprotest/config_source_dir1 
 
 ## console
-add added_source_dir added_target_dir
+add sysprotest/added_source_dir sysprotest/added_target_dir
 
-#check updates replace sdi with your sdi
 
-#add a file sto source client
-cp test_files/f4_1000.txt /home/users/sdi/test1/config_source_dir2 
-## check sto target client
-ls -las /home/users/sdi/test1/config_source_dir2 
 
-#add a file  sto source client
-cp test_files/f4_2000.txt /home/users/sdi/test1/config_source_dir2 
-## check sto target client
-ls -las /home/users/sdi/test1/config_source_dir2
 
-#remove a file from source
-rm -rf /home/users/sdi/test1/config_source_dir2/f4_2000.txt
-## check sto target client
-ls -las /home/users/sdi/test1/config_source_dir2
 
-#update a file in source
-ls -las /home/users/sdi/test1/config_source_dir2
-cat test_files/f4_1000.txt >> /home/users/sdi/test1/config_source_dir2/f4_1000_copy.txt
-## check sto target client
-ls -las /home/users/sdi/test1/config_source_dir2
+
+
+
+
 
 ## console //
 shutdown
