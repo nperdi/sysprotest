@@ -17,10 +17,12 @@
 ##check initial sync in target client
 
 ## console //
-cancel sysprotest/config_source_dir1 
+cancel /sysprotest/config_source_dir1 
 
 ## console
-add sysprotest/added_source_dir sysprotest/added_target_dir
+add /sysprotest/added_source_dir1@SOURCE_CLIENT_IP:SOURCE_CLIENT_PORT /sysprotest/added_target_dir1@TARGET_CLIENT_IP:TARGET_CLIENT_PORT
+
+
 
 ## console //
 shutdown

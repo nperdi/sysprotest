@@ -34,20 +34,20 @@ sync fullpathXXX/config_source_dir2
 
 #add a file
 cp fullpathXXX/test_files/f4_1000.txt fullpathXXX/config_source_dir2 
-ls -las fullpathXXX/config_source_dir2 
+ls -las fullpathXXX/config_target_dir2 
 
 #add a file
 cp fullpathXXX/test_files/f4_2000.txt fullpathXXX/config_source_dir2 
-ls -las fullpathXXX/config_source_dir2
+ls -las fullpathXXX/config_target_dir2
 
 #remove a file
 rm -rf fullpathXXX/config_source_dir2/f4_2000.txt
-ls -las fullpathXXX/config_source_dir2
+ls -las fullpathXXX/config_target_dir2
 
 #update a file
 ls -las fullpathXXX/config_source_dir2
 cat fullpathXXX/test_files/f4_1000.txt >> fullpathXXX/config_source_dir2/f4_1000_copy.txt
-ls -las fullpathXXX/config_source_dir2
+ls -las fullpathXXX/config_target_dir2
 
 
 ## console //
