@@ -23,7 +23,7 @@ cancel /sysprotest/config_source_dir1
 
 ## console
 add /sysprotest/added_source_dir@SOURCE_CLIENT_IP:SOURCE_CLIENT_PORT /sysprotest/added_target_dir@TARGET_CLIENT_IP:TARGET_CLIENT_PORT
-
+ls sysprotest/added_target_dir
 
 
 ## console //
