@@ -1,10 +1,6 @@
 
 
-## run nfs_manager in aterm connected at NFS_MANAGER_IP and NFS_MANAGER_PORT
-./nfs_manager -l np_nfs_manager.log -c sysprotest/config_nfs.cfg -n 5 -p NFS_MANAGER_PORT -b 7
 
-## run nfs_console in another console 
-./nfs_console -l np_nfs_console.log -h NFS_MANAGER_IP -p NFS_MANAGER_PORT
 
 ## run a nfs_client (source) in another console  
 ## on SOURCE_CLIENT_IP
@@ -13,6 +9,12 @@
 ## run another nfs_client (target) in another console  
 ## on TARGET_CLIENT_IP 
 ./nfs_client -p TARGET_CLIENT_PORT
+
+## run nfs_manager in aterm connected at NFS_MANAGER_IP and NFS_MANAGER_PORT
+./nfs_manager -l np_nfs_manager.log -c sysprotest/config_nfs.cfg -n 5 -p NFS_MANAGER_PORT -b 7
+
+## run nfs_console in another console 
+./nfs_console -l np_nfs_console.log -h NFS_MANAGER_IP -p NFS_MANAGER_PORT
 
 ##check initial sync in target client
 
