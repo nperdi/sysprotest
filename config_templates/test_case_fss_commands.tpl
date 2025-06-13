@@ -1,6 +1,6 @@
 
 ## run fss_manager in a term
-./fss_manager -l np_fss_manager.log -c sysprotest/config_fss.cfg -n 5
+./fss_manager -l np_fss_manager.log -c config_fss.cfg -n 5
 
 ## runn fss_console in another console
 ./fss_console -l np_fss_console.log
