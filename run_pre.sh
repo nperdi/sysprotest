@@ -75,8 +75,6 @@ sed -e "s#SOURCE_CLIENT_IP#${SOURCE_CLIENT_IP}#g" \
     "$CONFIG_FILE" > "$OUTPUT_FILE"
 
 
-
-
 # Προαιρετική αντιγραφή στον πάνω φάκελο
 mv config_fss.cfg ../
 mv config_nfs.cfg ../
